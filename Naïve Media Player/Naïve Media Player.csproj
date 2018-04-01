@@ -107,6 +107,9 @@
     <None Include="Naïve Media Player_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\gd.jpg" />
+    <Content Include="Assets\my.mp4" />
+    <Content Include="Assets\陈奕迅 - 红玫瑰.mp3" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />

@@ -6,8 +6,31 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Name="MyGrid" Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <Button Content="Choose file" Click="Button_Click" Margin="200,350,0,0" ></Button>
+            <TextBlock Margin="150,20,0,0">点击按钮选择文件（格式：.mp4/.mp3)</TextBlock>
+        </StackPanel>
+        <Grid Grid.Column="1">
+            <MediaElement  x:Name="mediaPlayer"
+                           VerticalAlignment="Center" HorizontalAlignment="Center"
+               AutoPlay="false"
+               AreTransportControlsEnabled="True"
+               Source="Assets/my.mp4"
+               Width="400"
+               Height="400">
+            <MediaElement.TransportControls>
+                <MediaTransportControls IsCompact="False"/>
+            </MediaElement.TransportControls>
+        </MediaElement>
+            <Image x:Name="img" VerticalAlignment="Center" HorizontalAlignment="Center"  Height="400"  Width="400" Source="Assets/gd.jpg" Opacity="0" />
+       
+        </Grid>
 
     </Grid>
+
 </Page>
